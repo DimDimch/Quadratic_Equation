@@ -99,16 +99,12 @@ int PrintSolution(quadraticEquation_t equation) {
 
 	PrettyPrintEquation(equation);
 
-	if (roots.count == 2) {
+	if (roots.count == 2)
 		printf("Roots: x1 = %g; x2 = %g\n", roots.x1, roots.x2);
-		return roots.count;
-	}
-	else if (roots.count == 1) {
+	else if (roots.count == 1)
 		printf("Root: x = %g\n", roots.x1);
-		return roots.count;
-	}
-	else {
+	else
 		printf("This equation has no roots\n");
-		return roots.count;
-	}
+	
+	return (int)roots.count;
 }
